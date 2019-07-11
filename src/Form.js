@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css'
+import { addReservation } from './apiCalls';
 
 class Form extends Component {
   constructor(props) {
@@ -21,6 +22,31 @@ class Form extends Component {
     let newReservation = {...this.state, id:Date.now()}
     this.props.addReservation(newReservation);
   }
+
+  
+//ATTEMPT TO GET PERSIST TO WORK
+  // async handleSumbit(event) {
+  //   event.preventDefault();
+  //   const { updateReservation } = this.props;
+  //   const { reservation } = this.state;
+
+  //   try {
+  //     const reservations = await addReservation(reservation)
+  //     this.setState({
+  //       name: '',
+  //       date: '',
+  //       time: '',
+  //       numberOfGuests: ''
+  //     }
+  //     }, updateReservation(reservation));
+  //   } catch(error) {
+  //     this.setState({
+  //       errorStatus: 'Error adding grocery'
+  //     })
+  //   };
+  // }
+
+
 
   render() {
     return (
