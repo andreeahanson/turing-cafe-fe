@@ -6,7 +6,7 @@ const ReservationContainer = ({reservations}) => {
   const allReservations = reservations.map(reservation => {
     return (
       <main>
-      <ReservationCard id={reservation.id}  name={reservation.name} date={reservation.date} time={reservation.time} numberOfGuests={reservation.number} />
+        <ReservationCard id={reservation.id}  name={reservation.name} date={reservation.date} time={reservation.time} numberOfGuests={reservation.number} />
       </main>
     )
   })
